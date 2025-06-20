@@ -1,5 +1,5 @@
 <label>
   search
-  <input type="text"/>
+  <input type="text" (change)="updateQuery($event)"/>
 </label>
-
+<button (click) = "handleSearch()">Search</button>
