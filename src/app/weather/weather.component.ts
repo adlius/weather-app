@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { citiesData } from './data/cities_data_ts';
+import { todayForecast, forecastTestData } from './data/forecast.data';
 
 @Component({
   selector: 'app-weather',
@@ -6,6 +8,11 @@ import { Component } from '@angular/core';
   templateUrl: './weather.component.html',
   styleUrl: './weather.component.css'
 })
-export class WeatherComponent {
+export class WeatherComponent implements OnInit {
 
+  ngOnInit() {
+    console.log(citiesData);
+    console.log(todayForecast);
+    console.log(forecastTestData);
+  }
 }
