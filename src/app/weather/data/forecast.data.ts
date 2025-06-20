@@ -1,0 +1,70 @@
+export const todayForecast = {
+  date: '2025-06-20',
+  entries: [
+    { time: '6:00 AM', temperature: 25, icon: 'cloudy' },
+    { time: '9:00 AM', temperature: 28, icon: 'partly-cloudy' },
+    { time: '12:00 PM', temperature: 33, icon: 'sunny' },
+    { time: '3:00 PM', temperature: 34, icon: 'sunny' },
+    { time: '6:00 PM', temperature: 32, icon: 'sunny' },
+    { time: '9:00 PM', temperature: 30, icon: 'partly-cloudy' },
+  ],
+};
+
+export const forecastTestData = [
+  {
+    day: 'Today',
+    date: new Date(2025, 5, 20),
+    icon: 'sunny',
+    description: 'Sunny',
+    high: 36,
+    low: 22,
+  },
+  {
+    day: 'Tue',
+    date: new Date(2025, 5, 21),
+    icon: 'sunny',
+    description: 'Sunny',
+    high: 37,
+    low: 21,
+  },
+  {
+    day: 'Wed',
+    date: new Date(2025, 5, 22),
+    icon: 'sunny',
+    description: 'Sunny',
+    high: 37,
+    low: 21,
+  },
+  {
+    day: 'Thu',
+    date: new Date(2025, 5, 23),
+    icon: 'cloudy',
+    description: 'Cloudy',
+    high: 37,
+    low: 21,
+  },
+  {
+    day: 'Fri',
+    date: new Date(2025, 5, 24),
+    icon: 'cloudy',
+    description: 'Cloudy',
+    high: 37,
+    low: 21,
+  },
+  {
+    day: 'Sat',
+    date: new Date(2025, 5, 25),
+    icon: 'rainy',
+    description: 'Rainy',
+    high: 37,
+    low: 21,
+  },
+  {
+    day: 'Sun',
+    date: new Date(2025, 5, 26),
+    icon: 'sunny',
+    description: 'Sunny',
+    high: 37,
+    low: 21,
+  },
+];
