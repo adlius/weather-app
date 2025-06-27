@@ -3,10 +3,12 @@ import {CityModel} from './models/city.model';
 import {DayForecastModel} from './models/dayforecast.model';
 import {citiesData} from './data/cities_data_ts';
 import {todayForecast, forecastTestData} from './data/forecast.data';
+import { TodayForecastComponent } from "./today-forecast/today-forecast.component";
+import { SevenDayForecastComponent } from "./seven-day-forecast/seven-day-forecast.component";
 
 @Component({
   selector: 'app-weather',
-  imports: [],
+  imports: [TodayForecastComponent, SevenDayForecastComponent],
   templateUrl: './weather.component.html',
   styleUrl: './weather.component.css'
 })

@@ -5,6 +5,8 @@
 <button (click) = "handleSearch()">
   Search
 </button>
+<app-todayforecast [forecastDatum]=""/>
+<app-seven-day-forecast [forecastData]=""/>
 <!-- Show cityData if it exists -->
 <div>
     @for (city of citiesData; track city.id) {
@@ -14,9 +16,9 @@
     }
 </div>
 <div>
-  <p>City: {{cityData().name}}</p>
-  <p>Country: {{cityData().country}}</p>
-  <p>Weather: {{cityData().weather}}</p>
+  <p>City: {{cityData()?.name}}</p>
+  <p>Country: {{cityData()?.country}}</p>
+  <p>Weather: {{cityData()?.weather}}</p>
 </div>
 <div>
     @for (item of forecastTestData; track item.id) {
