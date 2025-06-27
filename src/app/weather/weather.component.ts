@@ -1,4 +1,6 @@
 import {Component, OnInit, signal} from '@angular/core';
+import {CityModel} from './models/city.model';
+import {DayForecastModel} from './models/dayforecast.model';
 import {citiesData} from './data/cities_data_ts';
 import {todayForecast, forecastTestData} from './data/forecast.data';
 
@@ -10,7 +12,7 @@ import {todayForecast, forecastTestData} from './data/forecast.data';
 })
 export class WeatherComponent implements OnInit {
   citySearch = '';
-  cityData = signal<any>({});
+  cityData = signal<CityModel | undefined>(undefined);
 
   citiesData = citiesData;
   forecastTestData = forecastTestData; // this.forecastTestData = imported forecastTestData
@@ -25,9 +27,9 @@ export class WeatherComponent implements OnInit {
 
   handleSearch() {
     console.log("pressed");
-    this.cityData.set(citiesData.find(city => {
-      return city.name.toLowerCase() === this.citySearch.toLowerCase(); // TODO: make it include??
-    }));
+    this.cityData.set(citiesData.find(
+      city => city.name.toLowerCase().includes(this.citySearch.toLowerCase())
+    ));
   }
 
   updateQuery(event: Event) {

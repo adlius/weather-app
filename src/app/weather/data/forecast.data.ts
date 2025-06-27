@@ -14,7 +14,7 @@ export const forecastTestData = [
   {
     id: 1,
     day: 'Today',
-    date: new Date(2025, 5, 20),
+    date: '2025-5-20',
     icon: 'sunny',
     description: 'Sunny',
     high: 36,
@@ -23,7 +23,7 @@ export const forecastTestData = [
   {
     id: 2,
     day: 'Tue',
-    date: new Date(2025, 5, 21),
+    date: '2025-5-21',
     icon: 'sunny',
     description: 'Sunny',
     high: 37,
@@ -32,7 +32,7 @@ export const forecastTestData = [
   {
     id: 3,
     day: 'Wed',
-    date: new Date(2025, 5, 22),
+    date: '2025-5-22',
     icon: 'sunny',
     description: 'Sunny',
     high: 37,
@@ -41,7 +41,7 @@ export const forecastTestData = [
   {
     id: 4,
     day: 'Thu',
-    date: new Date(2025, 5, 23),
+    date: '2025-5-23',
     icon: 'cloudy',
     description: 'Cloudy',
     high: 37,
@@ -50,7 +50,7 @@ export const forecastTestData = [
   {
     id: 5,
     day: 'Fri',
-    date: new Date(2025, 5, 24),
+    date: '2025-5-24',
     icon: 'cloudy',
     description: 'Cloudy',
     high: 37,
@@ -59,7 +59,7 @@ export const forecastTestData = [
   {
     id: 6,
     day: 'Sat',
-    date: new Date(2025, 5, 25),
+    date: '2025-5-25',
     icon: 'rainy',
     description: 'Rainy',
     high: 37,
@@ -68,7 +68,7 @@ export const forecastTestData = [
   {
     id: 7,
     day: 'Sun',
-    date: new Date(2025, 5, 26),
+    date: '2025-5-26',
     icon: 'sunny',
     description: 'Sunny',
     high: 37,

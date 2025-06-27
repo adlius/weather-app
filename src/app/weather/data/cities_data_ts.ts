@@ -1,4 +1,7 @@
-export const citiesData = [
+import { City } from '../weather.entities';
+
+
+export const citiesData: City[] = [
   { id: 1, name: 'New York', country: 'United States', weather: 'sunny' },
   { id: 2, name: 'London', country: 'United Kingdom', weather: 'cloudy' },
   { id: 3, name: 'Berlin', country: 'Germany', weather: 'rainy' },
