@@ -1,5 +1,22 @@
 <label>
   search
-  <input type="text" (change)="updateQuery($event)"/>
+  <input type="text" (input)="updateQuery($event)" />
 </label>
-<button (click) = "handleSearch()">Search</button>
+<button (click) = "handleSearch()">
+  Search
+</button>
+<!-- Show cityData if it exists -->
+<div>
+    @for (city of citiesData; track city.id) {
+      <div>
+        {{ city.name }}
+      </div>
+    }
+</div>
+<div>
+    @for (item of forecastTestData; track item.id) {
+      <div>
+        {{ item.day }}
+      </div>
+    }
+</div>

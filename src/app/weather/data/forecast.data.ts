@@ -12,6 +12,7 @@ export const todayForecast = {
 
 export const forecastTestData = [
   {
+    id: 1,
     day: 'Today',
     date: new Date(2025, 5, 20),
     icon: 'sunny',
@@ -20,6 +21,7 @@ export const forecastTestData = [
     low: 22,
   },
   {
+    id: 2,
     day: 'Tue',
     date: new Date(2025, 5, 21),
     icon: 'sunny',
@@ -28,6 +30,7 @@ export const forecastTestData = [
     low: 21,
   },
   {
+    id: 3,
     day: 'Wed',
     date: new Date(2025, 5, 22),
     icon: 'sunny',
@@ -36,6 +39,7 @@ export const forecastTestData = [
     low: 21,
   },
   {
+    id: 4,
     day: 'Thu',
     date: new Date(2025, 5, 23),
     icon: 'cloudy',
@@ -44,6 +48,7 @@ export const forecastTestData = [
     low: 21,
   },
   {
+    id: 5,
     day: 'Fri',
     date: new Date(2025, 5, 24),
     icon: 'cloudy',
@@ -52,6 +57,7 @@ export const forecastTestData = [
     low: 21,
   },
   {
+    id: 6,
     day: 'Sat',
     date: new Date(2025, 5, 25),
     icon: 'rainy',
@@ -60,6 +66,7 @@ export const forecastTestData = [
     low: 21,
   },
   {
+    id: 7,
     day: 'Sun',
     date: new Date(2025, 5, 26),
     icon: 'sunny',
