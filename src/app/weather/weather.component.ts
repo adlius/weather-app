@@ -1,10 +1,11 @@
-import {Component, OnInit, signal} from '@angular/core';
+import {Component, computed, OnInit, signal} from '@angular/core';
 import {CityModel} from './models/city.model';
 import {DayForecastModel} from './models/dayforecast.model';
 import {citiesData} from './data/cities_data_ts';
 import {todayForecast, forecastTestData} from './data/forecast.data';
 import { TodayForecastComponent } from "./today-forecast/today-forecast.component";
 import { SevenDayForecastComponent } from "./seven-day-forecast/seven-day-forecast.component";
+import {TodayForecastModel} from './models/todayforecast.model';
 
 @Component({
   selector: 'app-weather',
@@ -15,9 +16,12 @@ import { SevenDayForecastComponent } from "./seven-day-forecast/seven-day-foreca
 export class WeatherComponent implements OnInit {
   citySearch = '';
   cityData = signal<CityModel | undefined>(undefined);
+  newSignal = computed<TodayForecastModel | undefined>(() => {
+    return todayForecast
+  });
 
-  citiesData = citiesData;
-  forecastTestData = forecastTestData; // this.forecastTestData = imported forecastTestData
+  #citiesData = citiesData;
+  #forecastTestData = forecastTestData; // this.forecastTestData = imported forecastTestData
 
   ngOnInit() {
     // var city_search = $
@@ -39,4 +43,6 @@ export class WeatherComponent implements OnInit {
     this.citySearch = (event.target as any).value;
     // console.log({ citySearch: this.citySearch });
   }
+
+  protected readonly citiesData = citiesData;
 }

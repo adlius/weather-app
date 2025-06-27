@@ -1,1 +1,11 @@
-<p>todayforecast works!</p>
+<!--<p>ForecastDatum: {{forecastDatum()|json}}</p>-->
+
+<div>
+    @for (forestData of forecastDatum()?.entries; track forestData.time) {
+      <div>
+        <p>{{ forestData.time }}</p>
+        <p>{{ forestData.temperature }}</p>
+        <p>{{ forestData.icon }}</p>
+      </div>
+    }
+</div>
