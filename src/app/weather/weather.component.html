@@ -14,9 +14,15 @@
     }
 </div>
 <div>
+  <p>City: {{cityData().name}}</p>
+  <p>Country: {{cityData().country}}</p>
+  <p>Weather: {{cityData().weather}}</p>
+</div>
+<div>
     @for (item of forecastTestData; track item.id) {
       <div>
         {{ item.day }}
       </div>
     }
 </div>
+

@@ -1,4 +1,4 @@
-import {Component, OnInit, signal, ɵɵsetComponentScope} from '@angular/core';
+import {Component, OnInit, signal} from '@angular/core';
 import {citiesData} from './data/cities_data_ts';
 import {todayForecast, forecastTestData} from './data/forecast.data';
 
@@ -10,7 +10,7 @@ import {todayForecast, forecastTestData} from './data/forecast.data';
 })
 export class WeatherComponent implements OnInit {
   citySearch = '';
-  cityData = {};
+  cityData = signal<any>({});
 
   citiesData = citiesData;
   forecastTestData = forecastTestData; // this.forecastTestData = imported forecastTestData
@@ -25,13 +25,9 @@ export class WeatherComponent implements OnInit {
 
   handleSearch() {
     console.log("pressed");
-    // Find city in citiesData that contains text of this.citySearch
-    this.cityData = citiesData.filter(city => {
+    this.cityData.set(citiesData.find(city => {
       return city.name.toLowerCase() === this.citySearch.toLowerCase(); // TODO: make it include??
-    })
-    console.log({ cityData: this.cityData });
-    // store city and its weather data on the component
-    // have it show up on the html side
+    }));
   }
 
   updateQuery(event: Event) {
