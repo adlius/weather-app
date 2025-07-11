@@ -2,9 +2,7 @@
   search
   <input type="text" (input)="updateQuery($event)" />
 </label>
-<button (click) = "handleSearch()">
-  Search
-</button>
+<p-button (click) = "handleSearch()" label="Search" />
 <app-todayforecast [forecastDatum]="newSignal()"/>
 <app-seven-day-forecast [forecastData]=""/>
 <!-- Show cityData if it exists -->

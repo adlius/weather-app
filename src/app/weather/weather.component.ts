@@ -6,10 +6,11 @@ import {todayForecast, forecastTestData} from './data/forecast.data';
 import { TodayForecastComponent } from "./today-forecast/today-forecast.component";
 import { SevenDayForecastComponent } from "./seven-day-forecast/seven-day-forecast.component";
 import {TodayForecastModel} from './models/todayforecast.model';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-weather',
-  imports: [TodayForecastComponent, SevenDayForecastComponent],
+  imports: [TodayForecastComponent, SevenDayForecastComponent, ButtonModule],
   templateUrl: './weather.component.html',
   styleUrl: './weather.component.css'
 })
