@@ -5,12 +5,14 @@ import {citiesData} from './data/cities_data_ts';
 import {todayForecast, forecastTestData} from './data/forecast.data';
 import { TodayForecastComponent } from "./today-forecast/today-forecast.component";
 import { SevenDayForecastComponent } from "./seven-day-forecast/seven-day-forecast.component";
-import {TodayForecastModel} from './models/todayforecast.model';
+import { TodayForecastModel } from './models/todayforecast.model';
+import { FloatLabelModule } from 'primeng/floatlabel';
+import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-weather',
-  imports: [TodayForecastComponent, SevenDayForecastComponent, ButtonModule],
+  imports: [TodayForecastComponent, SevenDayForecastComponent, ButtonModule, FloatLabelModule, InputTextModule],
   templateUrl: './weather.component.html',
   styleUrl: './weather.component.css'
 })

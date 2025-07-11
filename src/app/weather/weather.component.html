@@ -1,7 +1,9 @@
-<label>
-  search
-  <input type="text" (input)="updateQuery($event)" />
-</label>
+<p-floatlabel variant="on">
+  <label>
+    Search
+  </label>
+  <input type="text" pInputText (input)="updateQuery($event)" />
+</p-floatlabel>
 <p-button (click) = "handleSearch()" label="Search" />
 <app-todayforecast [forecastDatum]="newSignal()"/>
 <app-seven-day-forecast [forecastData]=""/>
